@@ -6,5 +6,21 @@ namespace GroupProject
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            button1.BackColor = Color.DarkSlateBlue;
+            button1.ForeColor = Color.BurlyWood;
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void progressBar1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

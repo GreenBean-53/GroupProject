@@ -28,12 +28,43 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
+            button1 = new Button();
+            progressBar1 = new ProgressBar();
+            SuspendLayout();
+            // 
+            // button1
+            // 
+            button1.Location = new Point(332, 152);
+            button1.Name = "button1";
+            button1.Size = new Size(112, 34);
+            button1.TabIndex = 0;
+            button1.Text = "Continue";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
+            // progressBar1
+            // 
+            progressBar1.Location = new Point(86, 286);
+            progressBar1.Name = "progressBar1";
+            progressBar1.Size = new Size(613, 48);
+            progressBar1.TabIndex = 2;
+            progressBar1.Click += progressBar1_Click;
+            // 
+            // Form1
+            // 
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Text = "Form1";
+            Controls.Add(progressBar1);
+            Controls.Add(button1);
+            Name = "Form1";
+            Text = "Vehicle Auction Game";
+            ResumeLayout(false);
         }
 
         #endregion
+
+        private Button button1;
+        private ProgressBar progressBar1;
     }
 }
