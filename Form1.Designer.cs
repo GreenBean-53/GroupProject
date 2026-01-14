@@ -1,6 +1,6 @@
 ﻿namespace GroupProject
 {
-    partial class Form1
+    partial class Game
     {
         /// <summary>
         ///  Required designer variable.
@@ -28,37 +28,31 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Game));
             button1 = new Button();
             progressBar1 = new ProgressBar();
             SuspendLayout();
             // 
             // button1
             // 
-            button1.Location = new Point(332, 152);
+            resources.ApplyResources(button1, "button1");
             button1.Name = "button1";
-            button1.Size = new Size(112, 34);
-            button1.TabIndex = 0;
-            button1.Text = "Continue";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
             // progressBar1
             // 
-            progressBar1.Location = new Point(86, 286);
+            resources.ApplyResources(progressBar1, "progressBar1");
             progressBar1.Name = "progressBar1";
-            progressBar1.Size = new Size(613, 48);
-            progressBar1.TabIndex = 2;
             progressBar1.Click += progressBar1_Click;
             // 
-            // Form1
+            // Game
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
             Controls.Add(progressBar1);
             Controls.Add(button1);
-            Name = "Form1";
-            Text = "Vehicle Auction Game";
+            Name = "Game";
             ResumeLayout(false);
         }
 
