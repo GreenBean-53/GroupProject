@@ -1,13 +1,17 @@
 using System.CodeDom.Compiler;
+using System.Runtime.InteropServices;
 using System.Security.Cryptography;
+using System.Security.Cryptography.Xml;
 
 namespace GroupProject
 {
     public partial class Game : Form
     {
+
         public Game()
         {
             InitializeComponent();
+            
             List<String> Vehicles = new List<String>();
             Vehicles.Add("Volvo 850r");
             Vehicles.Add("Subaru Legacy");
@@ -34,6 +38,40 @@ namespace GroupProject
             List<String> Images = new List<String>();
             Images.Add("imageexamplefile.jpg");
 
+            
+
+            Random num1 = new Random();
+            int int1 = num1.Next(20);
+            Console.WriteLine(int1);
+            //number used to get the other things
+            string Vehicle = Vehicles[int1];
+            Console.WriteLine(Vehicle);
+            //int1 used to get the vehicle choice
+            string Image = Images[int1];
+            Console.WriteLine(Image);
+            //later add function to open the individual image file
+        }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            button1.BackColor = Color.DarkSlateBlue;
+            button1.ForeColor = Color.BurlyWood;
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void progressBar1_Click(object sender, EventArgs e)
+        {
+
+        }
+    }
+    public class Vehicles
+    {
+        private void Issues()
+        {
+            Console.WriteLine("Issue Selection Triggered");
             List<String> Issues = new List<String>();
             Issues.Add("Rust");
             Issues.Add("Engine Knocking");
@@ -51,41 +89,19 @@ namespace GroupProject
             Issues.Add("Dead Body in the Back");
             Issues.Add("Suggestion Wheel");
             Issues.Add("Shattered Windows");
-            Issues.Add("Coolant Leak");
+            Issues.Add("Spontaneous Combustion");
             Issues.Add("Broken Radiator");
             Issues.Add("Broken Radio");
-            Issues.Add("Missing Doors");
+            Issues.Add("Filled with Asbestos");
+            for ()
+            {
 
-            Random num1 = new Random();
-            int int1 = num1.Next(20);
-            Console.WriteLine(int1);
-            //number used to get the other things
-            string Vehicle = Vehicles[int1];
-            Console.WriteLine(Vehicle);
-            //int1 used to get the vehicle choice
-            string Image = Images[int1];
-            Console.WriteLine(Image);
-            //later add function to open the individual image file
+            }
             Random num2 = new Random();
             int int2 = num2.Next(20);
             string Issue = Issues[int2];
             Console.WriteLine(Issue);
             //new int2 used to randomise the issue from the list
-        }
-        private void button1_Click(object sender, EventArgs e)
-        {
-            button1.BackColor = Color.DarkSlateBlue;
-            button1.ForeColor = Color.BurlyWood;
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void progressBar1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
