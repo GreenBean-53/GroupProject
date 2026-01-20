@@ -47,8 +47,8 @@ namespace GroupProject
             string Vehicle = Vehicles[int1];
             Console.WriteLine(Vehicle);
             //int1 used to get the vehicle choice
-            string Image = Images[int1];
-            Console.WriteLine(Image);
+     //       string Image = Images[int1];
+     //       Console.WriteLine(Image);
             //later add function to open the individual image file
         }
 
@@ -73,10 +73,6 @@ namespace GroupProject
 
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
 
     }
     public class Vehicles
@@ -105,7 +101,7 @@ namespace GroupProject
             Issues.Add("Broken Radiator");
             Issues.Add("Broken Radio");
             Issues.Add("Filled with Asbestos");
-            for ()
+     //       for ()
             {
 
             }
