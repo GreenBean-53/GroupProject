@@ -241,5 +241,7 @@
         private Button exitButtonFP;
         private Button exitButtonTP;
         private Button exitButtonGM;
+        private TabControl auctionTabs;
+        private TabPage mainMenu;
     }
 }
