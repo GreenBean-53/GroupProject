@@ -51,11 +51,7 @@ namespace GroupProject
             Console.WriteLine(Image);
             //later add function to open the individual image file
         }
-        private void button1_Click(object sender, EventArgs e)
-        {
-            button1.BackColor = Color.DarkSlateBlue;
-            button1.ForeColor = Color.BurlyWood;
-        }
+
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -81,6 +77,7 @@ namespace GroupProject
         {
 
         }
+
     }
     public class Vehicles
     {
