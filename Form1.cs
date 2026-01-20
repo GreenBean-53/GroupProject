@@ -47,8 +47,13 @@ namespace GroupProject
             string Vehicle = Vehicles[int1];
             Console.WriteLine(Vehicle);
             //int1 used to get the vehicle choice
+<<<<<<< Updated upstream
      //       string Image = Images[int1];
      //       Console.WriteLine(Image);
+=======
+         //   string Image = Images[int1];
+          //  Console.WriteLine(Image);
+>>>>>>> Stashed changes
             //later add function to open the individual image file
         }
 
@@ -73,7 +78,10 @@ namespace GroupProject
 
         }
 
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
     }
     public class Vehicles
     {
@@ -101,7 +109,11 @@ namespace GroupProject
             Issues.Add("Broken Radiator");
             Issues.Add("Broken Radio");
             Issues.Add("Filled with Asbestos");
+<<<<<<< Updated upstream
      //       for ()
+=======
+ //           for ()
+>>>>>>> Stashed changes
             {
 
             }
