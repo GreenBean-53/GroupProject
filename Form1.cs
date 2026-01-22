@@ -11,49 +11,20 @@ namespace GroupProject
         public Game()
         {
             InitializeComponent();
-            
-            List<String> Vehicles = new List<String>();
-            Vehicles.Add("Volvo 850r");
-            Vehicles.Add("Subaru Legacy");
-            Vehicles.Add("Subaru Impreza");
-            Vehicles.Add("Chevrolet Bel Air");
-            Vehicles.Add("Chevrolet Silverado");
-            Vehicles.Add("Suzuki Jimney");
-            Vehicles.Add("Bismarck");
-            Vehicles.Add("Yamato");
-            Vehicles.Add("MiG-15");
-            Vehicles.Add("Fairey Swordfish");
-            Vehicles.Add("Churchill Gun Carrier");
-            Vehicles.Add("T34");
-            Vehicles.Add("Toyota Land Cruiser");
-            Vehicles.Add("B29 Enola Gay");
-            Vehicles.Add("Reliant Robin");
-            Vehicles.Add("RedBull Soapbox");
-            Vehicles.Add("RedBull Mini");
-            Vehicles.Add("Carthaginian War Elephant");
-            Vehicles.Add("ASDA Shopping Trolley");
-            Vehicles.Add("Wright Flyer");
             //Vehicles
 
             List<String> Images = new List<String>();
             Images.Add("imageexamplefile.jpg");
 
-            
 
-            Random num1 = new Random();
-            int int1 = num1.Next(20);
-            Console.WriteLine(int1);
-            //number used to get the other things
-            string Vehicle = Vehicles[int1];
-            Console.WriteLine(Vehicle);
+
+
             //int1 used to get the vehicle choice
      //       string Image = Images[int1];
      //       Console.WriteLine(Image);
-=======
          //   string Image = Images[int1];
           //  Console.WriteLine(Image);
 
-=======
             //string Image = Images[int1];
             //Console.WriteLine(Image);
             //later add function to open the individual image file
@@ -81,7 +52,7 @@ namespace GroupProject
         }
 
 
-=======
+
     }
     public class Vehicles
     {
@@ -109,18 +80,55 @@ namespace GroupProject
             Issues.Add("Broken Radiator");
             Issues.Add("Broken Radio");
             Issues.Add("Filled with Asbestos");
-
-=======
-            //for ()
-
-            {
-
-            }
+            //move below to a method
             Random num2 = new Random();
             int int2 = num2.Next(20);
-            string Issue = Issues[int2];
-            Console.WriteLine(Issue);
-            //new int2 used to randomise the issue from the list
+            string Issue1 = Issues[int2];
+            Console.WriteLine(Issue1);
+            Random num3 = new Random();
+            int int3 = num2.Next(20);
+            string Issue2 = Issues[int2];
+            Console.WriteLine(Issue2);
+            //selects two issues; judah, you  can add the percentage chances later :)
+        }
+        private void positives()
+        {
+            Console.WriteLine("Positive Selection Triggered");
+            List<String> Positives = new List<String>();
+            Positives.Add("Workshop Voucher");
+            Positives.Add("Respectable Previous Owner");
+        }
+        private void Car()
+        {
+            Console.WriteLine("Vehicle Selection Triggered");
+            List<String> Vehicles = new List<String>();
+            Vehicles.Add("Volvo 850r");
+            Vehicles.Add("Subaru Legacy");
+            Vehicles.Add("Subaru Impreza");
+            Vehicles.Add("Chevrolet Bel Air");
+            Vehicles.Add("Chevrolet Silverado");
+            Vehicles.Add("Suzuki Jimney");
+            Vehicles.Add("Bismarck");
+            Vehicles.Add("Yamato");
+            Vehicles.Add("MiG-15");
+            Vehicles.Add("Fairey Swordfish");
+            Vehicles.Add("Churchill Gun Carrier");
+            Vehicles.Add("T34");
+            Vehicles.Add("Toyota Land Cruiser");
+            Vehicles.Add("B29 Enola Gay");
+            Vehicles.Add("Reliant Robin");
+            Vehicles.Add("RedBull Soapbox");
+            Vehicles.Add("RedBull Mini");
+            Vehicles.Add("Carthaginian War Elephant");
+            Vehicles.Add("ASDA Shopping Trolley");
+            Vehicles.Add("Wright Flyer");
+            //move below to a method
+            Random num1 = new Random();
+            int int1 = num1.Next(20);
+            Console.WriteLine(int1);
+            //number used to get the other things
+            string Vehicle = Vehicles[int1];
+            Console.WriteLine(Vehicle);
         }
     }
 }
