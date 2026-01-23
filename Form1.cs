@@ -2,6 +2,7 @@ using System.CodeDom.Compiler;
 using System.Runtime.InteropServices;
 using System.Security.Cryptography;
 using System.Security.Cryptography.Xml;
+using System.Security.Policy;
 
 namespace GroupProject
 {
@@ -11,23 +12,6 @@ namespace GroupProject
         public Game()
         {
             InitializeComponent();
-            //Vehicles
-
-            List<String> Images = new List<String>();
-            Images.Add("imageexamplefile.jpg");
-
-
-
-
-            //int1 used to get the vehicle choice
-     //       string Image = Images[int1];
-     //       Console.WriteLine(Image);
-         //   string Image = Images[int1];
-          //  Console.WriteLine(Image);
-
-            //string Image = Images[int1];
-            //Console.WriteLine(Image);
-            //later add function to open the individual image file
         }
 
 
@@ -49,6 +33,41 @@ namespace GroupProject
         private void button1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private IssueGenerator()
+        {
+            Console.WriteLine("Issue Selection Triggered");
+            List<String> Issues = new List<String>();
+            Issues.Add("Rust");
+            Issues.Add("Engine Knocking");
+            Issues.Add("Broken Shock Absorber");
+            Issues.Add("Misfiring");
+            Issues.Add("Blown Head Gasket");
+            Issues.Add("'Slick' Tyres");
+            Issues.Add("Electrical Issues");
+            Issues.Add("Oil Leak");
+            Issues.Add("Fuel Leak");
+            Issues.Add("Broken Camshaft");
+            Issues.Add("Bullet Holes");
+            Issues.Add("Full of Water");
+            Issues.Add("Misaligned Steering");
+            Issues.Add("Dead Body in the Back");
+            Issues.Add("Suggestion Wheel");
+            Issues.Add("Shattered Windows");
+            Issues.Add("Spontaneous Combustion");
+            Issues.Add("Broken Radiator");
+            Issues.Add("Broken Radio");
+            Issues.Add("Filled with Asbestos");
+            List<String> generatedIssue = new List<String>();
+            for (int i = 0; i < 3; i++)
+            {
+                Random num2 = new Random();
+                int int2 = num2.Next(20);
+                string Issue1 = Issues[int2];
+                generatedIssue.Add(Issue1);
+            }
+            return generatedIssue;
         }
 
 
@@ -97,6 +116,24 @@ namespace GroupProject
             List<String> Positives = new List<String>();
             Positives.Add("Workshop Voucher");
             Positives.Add("Respectable Previous Owner");
+            Positives.Add("Valid MOT");
+            Positives.Add("Cheap Insurance");
+            Positives.Add("Negligible Tax");
+            Positives.Add("Garden Centre Voucher in the Boot");
+            Positives.Add("");
+            Positives.Add("");
+            Positives.Add("");
+            Positives.Add("");
+            Positives.Add("");
+            Positives.Add("");
+            Positives.Add("");
+            Positives.Add("");
+            Positives.Add("");
+            Positives.Add("");
+            Positives.Add("");
+            Positives.Add("");
+            Positives.Add("");
+            Positives.Add("");
         }
         private void Car()
         {
@@ -130,5 +167,23 @@ namespace GroupProject
             string Vehicle = Vehicles[int1];
             Console.WriteLine(Vehicle);
         }
+    }
+    class Vehicle
+    {
+        private string Name;
+        private int Price;
+        private string Image;
+        private string Issue;
+        private string Positives;
+        private string owner;
+
+        public Vehicle(String pName, int pPrice, string pImage)
+        {
+            Name = pName;
+            Price = pPrice;
+            Image = pImage;
+            owner = "No Owner";
+        }
+
     }
 }
