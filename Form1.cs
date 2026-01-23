@@ -51,6 +51,12 @@ namespace GroupProject
             //       Console.WriteLine(Image);
             //   string Image = Images[int1];
             //  Console.WriteLine(Image);
+     //       string Image = Images[int1];
+     //       Console.WriteLine(Image);
+         //   string Image = Images[int1];
+          //  Console.WriteLine(Image);
+            //string Image = Images[int1];
+            //Console.WriteLine(Image);
             //later add function to open the individual image file
         }
 
@@ -104,6 +110,7 @@ namespace GroupProject
         {
 
         }
+
     }
     public class Vehicles
     {
