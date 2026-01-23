@@ -11,7 +11,7 @@ namespace GroupProject
         public Game()
         {
             InitializeComponent();
-            
+
             List<String> Vehicles = new List<String>();
             Vehicles.Add("Volvo 850r");
             Vehicles.Add("Subaru Legacy");
@@ -38,7 +38,7 @@ namespace GroupProject
             List<String> Images = new List<String>();
             Images.Add("imageexamplefile.jpg");
 
-            
+
 
             Random num1 = new Random();
             int int1 = num1.Next(20);
@@ -47,13 +47,14 @@ namespace GroupProject
             string Vehicle = Vehicles[int1];
             Console.WriteLine(Vehicle);
             //int1 used to get the vehicle choice
+            //       string Image = Images[int1];
+            //       Console.WriteLine(Image);
+            //   string Image = Images[int1];
+            //  Console.WriteLine(Image);
      //       string Image = Images[int1];
      //       Console.WriteLine(Image);
-=======
          //   string Image = Images[int1];
           //  Console.WriteLine(Image);
-
-=======
             //string Image = Images[int1];
             //Console.WriteLine(Image);
             //later add function to open the individual image file
@@ -80,8 +81,36 @@ namespace GroupProject
 
         }
 
+        private void button1_Click_1(object sender, EventArgs e)
+        {
 
-=======
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click_2(object sender, EventArgs e)
+        {
+
+        }
+
+        private void richTextBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
     }
     public class Vehicles
     {
@@ -109,9 +138,6 @@ namespace GroupProject
             Issues.Add("Broken Radiator");
             Issues.Add("Broken Radio");
             Issues.Add("Filled with Asbestos");
-
-=======
-            //for ()
 
             {
 
