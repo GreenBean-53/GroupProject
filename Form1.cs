@@ -35,7 +35,7 @@ namespace GroupProject
 
         }
 
-        private String IssueGenerator()
+        private List<String> IssueGenerator()
         {
             Console.WriteLine("Issue Selection Triggered");
             List<String> Issues = new List<String>();
@@ -59,17 +59,71 @@ namespace GroupProject
             Issues.Add("Broken Radiator");
             Issues.Add("Broken Radio");
             Issues.Add("Filled with Asbestos");
-            List<String> generatedIssue = new List<String>();
+            List<String> GeneratedIssue = new List<String>();
             for (int i = 0; i < 3; i++)
             {
                 Random num2 = new Random();
                 int int2 = num2.Next(20);
                 string Issue1 = Issues[int2];
-                generatedIssue.Add(Issue1);
+                GeneratedIssue.Add(Issue1);
             }
-            return generatedIssue;
+            return GeneratedIssue;
         }
+        private List<String> VehicleGenerator()
+        {
+            Console.WriteLine("Vehicle Selection Triggered");
+            List<String> Vehicles = new List<String>();
+            Vehicles.Add("Volvo 850r");
+            Vehicles.Add("Subaru Legacy");
+            Vehicles.Add("Subaru Impreza");
+            Vehicles.Add("Chevrolet Bel Air");
+            Vehicles.Add("Chevrolet Silverado");
+            Vehicles.Add("Suzuki Jimney");
+            Vehicles.Add("Bismarck");
+            Vehicles.Add("Yamato");
+            Vehicles.Add("MiG-15");
+            Vehicles.Add("Fairey Swordfish");
+            Vehicles.Add("Churchill Gun Carrier");
+            Vehicles.Add("T34");
+            Vehicles.Add("Toyota Land Cruiser");
+            Vehicles.Add("B29 Enola Gay");
+            Vehicles.Add("Reliant Robin");
+            Vehicles.Add("RedBull Soapbox");
+            Vehicles.Add("RedBull Mini");
+            Vehicles.Add("Carthaginian War Elephant");
+            Vehicles.Add("Mustang Mach 1");
+            Vehicles.Add("Williams FW14B");
 
+            List<String> GeneratedVehicle = new List<String>();
+            Random num1 = new Random();
+            int int1 = num1.Next(20);
+            Console.WriteLine(int1);
+            //number used to get the other things
+
+            List<String> Images = new List<String>();
+            Images.Add("Volvo.png");
+            Images.Add("Legacy.png");
+            Images.Add("Impreza.png");
+            Images.Add("BelAir.png");
+            Images.Add("Silverado.png");
+            Images.Add("Jimny.png");
+            Images.Add("");
+            Images.Add("");
+            Images.Add("");
+            Images.Add("");
+            Images.Add("");
+            Images.Add("");
+            Images.Add("LandCruiser.png");
+            Images.Add("");
+            Images.Add("ReliantRobin.png");
+            Images.Add("SoapBox.png");
+            Images.Add("RBmini.png");
+            Images.Add("WarElephant.png");
+            Images.Add("Mustang.png");
+            Images.Add("WilliamsFW14B.png");
+
+            return GeneratedVehicle;
+        }
 
 
     }
