@@ -35,7 +35,7 @@ namespace GroupProject
 
         }
 
-        private IssueGenerator()
+        private String IssueGenerator()
         {
             Console.WriteLine("Issue Selection Triggered");
             List<String> Issues = new List<String>();
@@ -183,6 +183,8 @@ namespace GroupProject
             Price = pPrice;
             Image = pImage;
             owner = "No Owner";
+
+
         }
 
     }
