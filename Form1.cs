@@ -2,6 +2,7 @@ using System.CodeDom.Compiler;
 using System.Runtime.InteropServices;
 using System.Security.Cryptography;
 using System.Security.Cryptography.Xml;
+using System.Windows.Forms;
 
 namespace GroupProject
 {
@@ -51,10 +52,10 @@ namespace GroupProject
             //       Console.WriteLine(Image);
             //   string Image = Images[int1];
             //  Console.WriteLine(Image);
-     //       string Image = Images[int1];
-     //       Console.WriteLine(Image);
-         //   string Image = Images[int1];
-          //  Console.WriteLine(Image);
+            //       string Image = Images[int1];
+            //       Console.WriteLine(Image);
+            //   string Image = Images[int1];
+            //  Console.WriteLine(Image);
             //string Image = Images[int1];
             //Console.WriteLine(Image);
             //later add function to open the individual image file
@@ -111,6 +112,25 @@ namespace GroupProject
 
         }
 
+        private void auctionFront_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void clickPlay(object sender, EventArgs e)
+        {
+            this.auctionTabs.SelectedTab = this.aucPurPage;
+        }
+
+        private void tutorialClick(object sender, EventArgs e)
+        {
+
+        }
+
+        private void exitClick(object sender, EventArgs e)
+        {
+
+        }
     }
     public class Vehicles
     {

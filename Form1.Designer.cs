@@ -36,32 +36,32 @@
             playButton = new Button();
             tutorialPage = new TabPage();
             loadingPage = new TabPage();
+            loadingImage = new PictureBox();
+            loadingBar = new ProgressBar();
+            aucPurPage = new TabPage();
+            vehcileTitle = new TextBox();
+            playerData = new RichTextBox();
+            vehcileData = new ListBox();
+            positiveAttributes = new RichTextBox();
+            negativeAttributes = new RichTextBox();
+            numericUpDown1 = new NumericUpDown();
+            skipBidButton = new Button();
+            currentMoney = new TextBox();
+            timeLimit = new ProgressBar();
+            raisePriceButton = new Button();
+            tutExitButton = new Button();
+            priceHistory = new ListBox();
+            vehcilePictureBox = new PictureBox();
             aucRepPage = new TabPage();
             aucSalePage = new TabPage();
             leaderboardPage = new TabPage();
-            vehcilePictureBox = new PictureBox();
-            priceHistory = new ListBox();
-            tutExitButton = new Button();
-            raisePriceButton = new Button();
-            timeLimit = new ProgressBar();
-            currentMoney = new TextBox();
-            skipBidButton = new Button();
-            numericUpDown1 = new NumericUpDown();
-            negativeAttributes = new RichTextBox();
-            positiveAttributes = new RichTextBox();
-            aucPurPage = new TabPage();
-            vehcileData = new ListBox();
-            playerData = new RichTextBox();
-            vehcileTitle = new TextBox();
-            loadingBar = new ProgressBar();
-            loadingImage = new PictureBox();
             auctionTabs.SuspendLayout();
             mainMenu.SuspendLayout();
             loadingPage.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)vehcilePictureBox).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
-            aucPurPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)loadingImage).BeginInit();
+            aucPurPage.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)vehcilePictureBox).BeginInit();
             SuspendLayout();
             // 
             // auctionTabs
@@ -102,6 +102,7 @@
             auctionFront.Size = new Size(382, 64);
             auctionFront.TabIndex = 3;
             auctionFront.Text = "The Auction";
+            auctionFront.Click += auctionFront_Click;
             // 
             // exitOpenPage
             // 
@@ -111,6 +112,7 @@
             exitOpenPage.TabIndex = 2;
             exitOpenPage.Text = "EXIT";
             exitOpenPage.UseVisualStyleBackColor = true;
+            exitOpenPage.Click += exitClick;
             // 
             // tutorialButton
             // 
@@ -120,6 +122,7 @@
             tutorialButton.TabIndex = 1;
             tutorialButton.Text = "TUTORIAL";
             tutorialButton.UseVisualStyleBackColor = true;
+            tutorialButton.Click += tutorialClick;
             // 
             // playButton
             // 
@@ -129,7 +132,7 @@
             playButton.TabIndex = 0;
             playButton.Text = "PLAY";
             playButton.UseVisualStyleBackColor = true;
-            playButton.Click += button1_Click_1;
+            playButton.Click += clickPlay;
             // 
             // tutorialPage
             // 
@@ -152,6 +155,153 @@
             loadingPage.TabIndex = 2;
             loadingPage.Text = "LoadingPage";
             loadingPage.UseVisualStyleBackColor = true;
+            // 
+            // loadingImage
+            // 
+            loadingImage.Location = new Point(0, 0);
+            loadingImage.Name = "loadingImage";
+            loadingImage.Size = new Size(1142, 585);
+            loadingImage.TabIndex = 1;
+            loadingImage.TabStop = false;
+            // 
+            // loadingBar
+            // 
+            loadingBar.Location = new Point(0, 585);
+            loadingBar.Name = "loadingBar";
+            loadingBar.Size = new Size(1148, 23);
+            loadingBar.TabIndex = 0;
+            // 
+            // aucPurPage
+            // 
+            aucPurPage.Controls.Add(vehcileTitle);
+            aucPurPage.Controls.Add(playerData);
+            aucPurPage.Controls.Add(vehcileData);
+            aucPurPage.Controls.Add(positiveAttributes);
+            aucPurPage.Controls.Add(negativeAttributes);
+            aucPurPage.Controls.Add(numericUpDown1);
+            aucPurPage.Controls.Add(skipBidButton);
+            aucPurPage.Controls.Add(currentMoney);
+            aucPurPage.Controls.Add(timeLimit);
+            aucPurPage.Controls.Add(raisePriceButton);
+            aucPurPage.Controls.Add(tutExitButton);
+            aucPurPage.Controls.Add(priceHistory);
+            aucPurPage.Controls.Add(vehcilePictureBox);
+            aucPurPage.Location = new Point(4, 24);
+            aucPurPage.Name = "aucPurPage";
+            aucPurPage.Padding = new Padding(3);
+            aucPurPage.Size = new Size(1148, 608);
+            aucPurPage.TabIndex = 4;
+            aucPurPage.Text = "AucPurchPage";
+            aucPurPage.UseVisualStyleBackColor = true;
+            // 
+            // vehcileTitle
+            // 
+            vehcileTitle.Location = new Point(302, 6);
+            vehcileTitle.Name = "vehcileTitle";
+            vehcileTitle.Size = new Size(547, 23);
+            vehcileTitle.TabIndex = 15;
+            // 
+            // playerData
+            // 
+            playerData.Location = new Point(6, 358);
+            playerData.Name = "playerData";
+            playerData.Size = new Size(290, 142);
+            playerData.TabIndex = 14;
+            playerData.Text = "";
+            playerData.TextChanged += richTextBox3_TextChanged;
+            // 
+            // vehcileData
+            // 
+            vehcileData.FormattingEnabled = true;
+            vehcileData.Location = new Point(6, 6);
+            vehcileData.Name = "vehcileData";
+            vehcileData.Size = new Size(290, 349);
+            vehcileData.TabIndex = 13;
+            // 
+            // positiveAttributes
+            // 
+            positiveAttributes.Location = new Point(579, 358);
+            positiveAttributes.Name = "positiveAttributes";
+            positiveAttributes.Size = new Size(270, 244);
+            positiveAttributes.TabIndex = 12;
+            positiveAttributes.Text = "";
+            // 
+            // negativeAttributes
+            // 
+            negativeAttributes.Location = new Point(302, 358);
+            negativeAttributes.Name = "negativeAttributes";
+            negativeAttributes.Size = new Size(270, 244);
+            negativeAttributes.TabIndex = 11;
+            negativeAttributes.Text = "";
+            // 
+            // numericUpDown1
+            // 
+            numericUpDown1.Location = new Point(855, 460);
+            numericUpDown1.Maximum = new decimal(new int[] { 100000, 0, 0, 0 });
+            numericUpDown1.Name = "numericUpDown1";
+            numericUpDown1.Size = new Size(290, 23);
+            numericUpDown1.TabIndex = 8;
+            // 
+            // skipBidButton
+            // 
+            skipBidButton.Location = new Point(855, 506);
+            skipBidButton.Name = "skipBidButton";
+            skipBidButton.Size = new Size(290, 96);
+            skipBidButton.TabIndex = 7;
+            skipBidButton.Text = "SKIP";
+            skipBidButton.UseVisualStyleBackColor = true;
+            // 
+            // currentMoney
+            // 
+            currentMoney.Location = new Point(855, 35);
+            currentMoney.Name = "currentMoney";
+            currentMoney.Size = new Size(290, 23);
+            currentMoney.TabIndex = 6;
+            // 
+            // timeLimit
+            // 
+            timeLimit.ForeColor = SystemColors.InactiveCaption;
+            timeLimit.Location = new Point(855, 6);
+            timeLimit.Name = "timeLimit";
+            timeLimit.Size = new Size(290, 23);
+            timeLimit.TabIndex = 5;
+            // 
+            // raisePriceButton
+            // 
+            raisePriceButton.Location = new Point(855, 358);
+            raisePriceButton.Name = "raisePriceButton";
+            raisePriceButton.Size = new Size(290, 96);
+            raisePriceButton.TabIndex = 3;
+            raisePriceButton.Text = "Raise";
+            raisePriceButton.UseVisualStyleBackColor = true;
+            // 
+            // tutExitButton
+            // 
+            tutExitButton.Location = new Point(6, 506);
+            tutExitButton.Name = "tutExitButton";
+            tutExitButton.Size = new Size(290, 96);
+            tutExitButton.TabIndex = 2;
+            tutExitButton.Text = "Tutorial / EXIT";
+            tutExitButton.UseVisualStyleBackColor = true;
+            tutExitButton.Click += button1_Click_2;
+            // 
+            // priceHistory
+            // 
+            priceHistory.FormattingEnabled = true;
+            priceHistory.Location = new Point(855, 66);
+            priceHistory.Name = "priceHistory";
+            priceHistory.Size = new Size(290, 289);
+            priceHistory.TabIndex = 1;
+            priceHistory.SelectedIndexChanged += listBox1_SelectedIndexChanged;
+            // 
+            // vehcilePictureBox
+            // 
+            vehcilePictureBox.Location = new Point(302, 35);
+            vehcilePictureBox.Name = "vehcilePictureBox";
+            vehcilePictureBox.Size = new Size(547, 320);
+            vehcilePictureBox.TabIndex = 0;
+            vehcilePictureBox.TabStop = false;
+            vehcilePictureBox.Click += pictureBox1_Click;
             // 
             // aucRepPage
             // 
@@ -183,153 +333,6 @@
             leaderboardPage.Text = "LeaderboardPage";
             leaderboardPage.UseVisualStyleBackColor = true;
             // 
-            // vehcilePictureBox
-            // 
-            vehcilePictureBox.Location = new Point(302, 35);
-            vehcilePictureBox.Name = "vehcilePictureBox";
-            vehcilePictureBox.Size = new Size(547, 320);
-            vehcilePictureBox.TabIndex = 0;
-            vehcilePictureBox.TabStop = false;
-            vehcilePictureBox.Click += pictureBox1_Click;
-            // 
-            // priceHistory
-            // 
-            priceHistory.FormattingEnabled = true;
-            priceHistory.Location = new Point(855, 66);
-            priceHistory.Name = "priceHistory";
-            priceHistory.Size = new Size(290, 289);
-            priceHistory.TabIndex = 1;
-            priceHistory.SelectedIndexChanged += listBox1_SelectedIndexChanged;
-            // 
-            // tutExitButton
-            // 
-            tutExitButton.Location = new Point(6, 506);
-            tutExitButton.Name = "tutExitButton";
-            tutExitButton.Size = new Size(290, 96);
-            tutExitButton.TabIndex = 2;
-            tutExitButton.Text = "Tutorial / EXIT";
-            tutExitButton.UseVisualStyleBackColor = true;
-            tutExitButton.Click += button1_Click_2;
-            // 
-            // raisePriceButton
-            // 
-            raisePriceButton.Location = new Point(855, 358);
-            raisePriceButton.Name = "raisePriceButton";
-            raisePriceButton.Size = new Size(290, 96);
-            raisePriceButton.TabIndex = 3;
-            raisePriceButton.Text = "Raise";
-            raisePriceButton.UseVisualStyleBackColor = true;
-            // 
-            // timeLimit
-            // 
-            timeLimit.ForeColor = SystemColors.InactiveCaption;
-            timeLimit.Location = new Point(855, 6);
-            timeLimit.Name = "timeLimit";
-            timeLimit.Size = new Size(290, 23);
-            timeLimit.TabIndex = 5;
-            // 
-            // currentMoney
-            // 
-            currentMoney.Location = new Point(855, 35);
-            currentMoney.Name = "currentMoney";
-            currentMoney.Size = new Size(290, 23);
-            currentMoney.TabIndex = 6;
-            // 
-            // skipBidButton
-            // 
-            skipBidButton.Location = new Point(855, 506);
-            skipBidButton.Name = "skipBidButton";
-            skipBidButton.Size = new Size(290, 96);
-            skipBidButton.TabIndex = 7;
-            skipBidButton.Text = "SKIP";
-            skipBidButton.UseVisualStyleBackColor = true;
-            // 
-            // numericUpDown1
-            // 
-            numericUpDown1.Location = new Point(855, 460);
-            numericUpDown1.Maximum = new decimal(new int[] { 100000, 0, 0, 0 });
-            numericUpDown1.Name = "numericUpDown1";
-            numericUpDown1.Size = new Size(290, 23);
-            numericUpDown1.TabIndex = 8;
-            // 
-            // negativeAttributes
-            // 
-            negativeAttributes.Location = new Point(302, 358);
-            negativeAttributes.Name = "negativeAttributes";
-            negativeAttributes.Size = new Size(270, 244);
-            negativeAttributes.TabIndex = 11;
-            negativeAttributes.Text = "";
-            // 
-            // positiveAttributes
-            // 
-            positiveAttributes.Location = new Point(579, 358);
-            positiveAttributes.Name = "positiveAttributes";
-            positiveAttributes.Size = new Size(270, 244);
-            positiveAttributes.TabIndex = 12;
-            positiveAttributes.Text = "";
-            // 
-            // aucPurPage
-            // 
-            aucPurPage.Controls.Add(vehcileTitle);
-            aucPurPage.Controls.Add(playerData);
-            aucPurPage.Controls.Add(vehcileData);
-            aucPurPage.Controls.Add(positiveAttributes);
-            aucPurPage.Controls.Add(negativeAttributes);
-            aucPurPage.Controls.Add(numericUpDown1);
-            aucPurPage.Controls.Add(skipBidButton);
-            aucPurPage.Controls.Add(currentMoney);
-            aucPurPage.Controls.Add(timeLimit);
-            aucPurPage.Controls.Add(raisePriceButton);
-            aucPurPage.Controls.Add(tutExitButton);
-            aucPurPage.Controls.Add(priceHistory);
-            aucPurPage.Controls.Add(vehcilePictureBox);
-            aucPurPage.Location = new Point(4, 24);
-            aucPurPage.Name = "aucPurPage";
-            aucPurPage.Padding = new Padding(3);
-            aucPurPage.Size = new Size(1148, 608);
-            aucPurPage.TabIndex = 4;
-            aucPurPage.Text = "AucPurchPage";
-            aucPurPage.UseVisualStyleBackColor = true;
-            // 
-            // vehcileData
-            // 
-            vehcileData.FormattingEnabled = true;
-            vehcileData.Location = new Point(6, 6);
-            vehcileData.Name = "vehcileData";
-            vehcileData.Size = new Size(290, 349);
-            vehcileData.TabIndex = 13;
-            // 
-            // playerData
-            // 
-            playerData.Location = new Point(6, 358);
-            playerData.Name = "playerData";
-            playerData.Size = new Size(290, 142);
-            playerData.TabIndex = 14;
-            playerData.Text = "";
-            playerData.TextChanged += richTextBox3_TextChanged;
-            // 
-            // vehcileTitle
-            // 
-            vehcileTitle.Location = new Point(302, 6);
-            vehcileTitle.Name = "vehcileTitle";
-            vehcileTitle.Size = new Size(547, 23);
-            vehcileTitle.TabIndex = 15;
-            // 
-            // loadingBar
-            // 
-            loadingBar.Location = new Point(0, 585);
-            loadingBar.Name = "loadingBar";
-            loadingBar.Size = new Size(1148, 23);
-            loadingBar.TabIndex = 0;
-            // 
-            // loadingImage
-            // 
-            loadingImage.Location = new Point(0, 0);
-            loadingImage.Name = "loadingImage";
-            loadingImage.Size = new Size(1142, 585);
-            loadingImage.TabIndex = 1;
-            loadingImage.TabStop = false;
-            // 
             // Game
             // 
             ClientSize = new Size(1154, 635);
@@ -339,11 +342,11 @@
             mainMenu.ResumeLayout(false);
             mainMenu.PerformLayout();
             loadingPage.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)vehcilePictureBox).EndInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)loadingImage).EndInit();
             aucPurPage.ResumeLayout(false);
             aucPurPage.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)loadingImage).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)vehcilePictureBox).EndInit();
             ResumeLayout(false);
             // 
             // button1
