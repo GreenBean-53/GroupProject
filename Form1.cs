@@ -85,7 +85,7 @@ namespace GroupProject
         {
             Console.WriteLine("Vehicle Selection Triggered");
             List<String> Vehicles = new List<String>();
-            Vehicles.Add(("Volvo 850r", "Volvo.png"));
+            Vehicles.Add("Volvo 850r", "Volvo.png");
             Vehicles.Add("Subaru Legacy", "Legacy.png");
             Vehicles.Add("Subaru Impreza", "Impreza.png");
             Vehicles.Add("Chevrolet Bel Air", "BelAir.png");
@@ -136,12 +136,14 @@ namespace GroupProject
 
         public Vehicle(String pName, int pPrice, string pImage)
         {
-            Name = VehicleGenerator();
+            Name = VehicleGenerator(0);
             Price = pPrice;
-            Image = pImage;
-            Issue = IssueGenerator();
-            Positives = PositiveGenerator();
-
+            Image = VehicleGenerator(1);
+            Issue = IssueGenerator(0);
+            Issue = IssueGenerator(1); 
+            Positives = PositiveGenerator(0);
+            PositivesValue = PositiveGenerator(1);
+            
             
         }
 
