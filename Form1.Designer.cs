@@ -35,6 +35,7 @@
             tutorialButton = new Button();
             playButton = new Button();
             tutorialPage = new TabPage();
+            tutorialBackButton = new Button();
             loadingPage = new TabPage();
             loadingImage = new PictureBox();
             loadingBar = new ProgressBar();
@@ -57,6 +58,7 @@
             leaderboardPage = new TabPage();
             auctionTabs.SuspendLayout();
             mainMenu.SuspendLayout();
+            tutorialPage.SuspendLayout();
             loadingPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)loadingImage).BeginInit();
             aucPurPage.SuspendLayout();
@@ -136,6 +138,7 @@
             // 
             // tutorialPage
             // 
+            tutorialPage.Controls.Add(tutorialBackButton);
             tutorialPage.Location = new Point(4, 24);
             tutorialPage.Name = "tutorialPage";
             tutorialPage.Padding = new Padding(3);
@@ -143,6 +146,16 @@
             tutorialPage.TabIndex = 1;
             tutorialPage.Text = "TutorialPage";
             tutorialPage.UseVisualStyleBackColor = true;
+            // 
+            // tutorialBackButton
+            // 
+            tutorialBackButton.Location = new Point(3, 509);
+            tutorialBackButton.Name = "tutorialBackButton";
+            tutorialBackButton.Size = new Size(290, 96);
+            tutorialBackButton.TabIndex = 3;
+            tutorialBackButton.Text = "Tutorial / EXIT";
+            tutorialBackButton.UseVisualStyleBackColor = true;
+            tutorialBackButton.Click += button1_Click_3;
             // 
             // loadingPage
             // 
@@ -341,6 +354,7 @@
             auctionTabs.ResumeLayout(false);
             mainMenu.ResumeLayout(false);
             mainMenu.PerformLayout();
+            tutorialPage.ResumeLayout(false);
             loadingPage.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)loadingImage).EndInit();
             aucPurPage.ResumeLayout(false);
@@ -383,5 +397,6 @@
         private TextBox vehcileTitle;
         private PictureBox loadingImage;
         private ProgressBar loadingBar;
+        private Button tutorialBackButton;
     }
 }

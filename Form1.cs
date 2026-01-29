@@ -104,7 +104,7 @@ namespace GroupProject
 
         private void button1_Click_2(object sender, EventArgs e)
         {
-
+            this.auctionTabs.SelectedTab = this.tutorialPage;
         }
 
         private void richTextBox3_TextChanged(object sender, EventArgs e)
@@ -124,12 +124,17 @@ namespace GroupProject
 
         private void tutorialClick(object sender, EventArgs e)
         {
-
+            this.auctionTabs.SelectedTab = this.tutorialPage;
         }
 
         private void exitClick(object sender, EventArgs e)
         {
+            this.Close();
+        }
 
+        private void button1_Click_3(object sender, EventArgs e)
+        {
+            this.auctionTabs.SelectedTab = this.mainMenu;
         }
     }
     public class Vehicles
