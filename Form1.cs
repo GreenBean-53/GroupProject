@@ -32,13 +32,20 @@ namespace GroupProject
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            
         }
 
-        
+       
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 
-    }
+
+
+
     class Vehicle
     {
         private string Name;
@@ -47,64 +54,66 @@ namespace GroupProject
         private List<String> Issue;
         private string Positives;
         private string owner;
-        public List<String> IssueGenerator()
+        public List<Tuple<String, int>> IssueGenerator()
         {
             Console.WriteLine("Issue Selection Triggered");
-            List<String> Issues = new List<String>();
-            Issues.Add("Rust", -3000);
-            Issues.Add("Engine Knocking", -500);
-            Issues.Add("Broken Shock Absorber", -100);
-            Issues.Add("Misfiring", -600);
-            Issues.Add("Blown Head Gasket", -200);
-            Issues.Add("'Slick' Tyres", -400);
-            Issues.Add("Electrical Issues", -50);
-            Issues.Add("Oil Leak", -70);
-            Issues.Add("Fuel Leak", -400);
-            Issues.Add("Broken Camshaft", -300);
-            Issues.Add("Bullet Holes", -900);
-            Issues.Add("Full of Water", -200);
-            Issues.Add("Misaligned Steering", -60);
-            Issues.Add("Dead Body in the Back", -4000);
-            Issues.Add("Suggestion Wheel", -2000);
-            Issues.Add("Shattered Windows", -600);
-            Issues.Add("Spontaneous Combustion", -10000);
-            Issues.Add("Broken Radiator", -600);
-            Issues.Add("Broken Radio", -30);
-            Issues.Add("Filled with Asbestos", -6000);
-            List<String> GeneratedIssue = new List<String>();
+            List<Tuple<String, int>> Issues = new List<Tuple<String, int>>();
+            Issues.Add(Tuple.Create("Rust", -3000));
+            Issues.Add(Tuple.Create("Engine Knocking", -500));
+            Issues.Add(Tuple.Create("Broken Shock Absorber", -100));
+            Issues.Add(Tuple.Create("Misfiring", -600));
+            Issues.Add(Tuple.Create("Blown Head Gasket", -200));
+            Issues.Add(Tuple.Create("'Slick' Tyres", -400));
+            Issues.Add(Tuple.Create("Electrical Issues", -50));
+            Issues.Add(Tuple.Create("Oil Leak", -70));
+            Issues.Add(Tuple.Create("Fuel Leak", -400));
+            Issues.Add(Tuple.Create("Broken Camshaft", -300));
+            Issues.Add(Tuple.Create("Bullet Holes", -900));
+            Issues.Add(Tuple.Create("Full of Water", -200));
+            Issues.Add(Tuple.Create("Misaligned Steering", -60));
+            Issues.Add(Tuple.Create("Dead Body in the Back", -4000));
+            Issues.Add(Tuple.Create("Suggestion Wheel", -2000));
+            Issues.Add(Tuple.Create("Shattered Windows", -600));
+            Issues.Add(Tuple.Create("Spontaneous Combustion", -10000));
+            Issues.Add(Tuple.Create("Broken Radiator", -600));
+            Issues.Add(Tuple.Create("Broken Radio", -30));
+            Issues.Add(Tuple.Create("Filled with Asbestos", -6000));
+            List<Tuple<String, int>> GeneratedIssue = new List<Tuple<String, int>>();
             for (int i = 0; i < 3; i++)
             {
                 Random num2 = new Random();
                 int int2 = num2.Next(20);
-                string Issue1 = Issues[int2];
-                GeneratedIssue.Add(Issue1);
+                Tuple<string, int> Issue = Issues[int2];
+                System.Diagnostics.Debug.WriteLine(Issue);
+                //GeneratedIssue.Add(Tuple.Create(Issue));
             }
             return GeneratedIssue;
+
         }
-        public List<String> VehicleGenerator()
+        public List<Tuple<String, string, int>> VehcileGenerator()
         {
             Console.WriteLine("Vehicle Selection Triggered");
             List<String> Vehicles = new List<String>();
-            Vehicles.Add("Volvo 850r", "Volvo.png");
-            Vehicles.Add("Subaru Legacy", "Legacy.png");
-            Vehicles.Add("Subaru Impreza", "Impreza.png");
-            Vehicles.Add("Chevrolet Bel Air", "BelAir.png");
-            Vehicles.Add("Chevrolet Silverado", "Silverado.png");
-            Vehicles.Add("Suzuki Jimney", "Jimny.png");
-            Vehicles.Add("Bismarck", "");
-            Vehicles.Add("Yamato", "");
-            Vehicles.Add("MiG-15", "");
-            Vehicles.Add("Fairey Swordfish", "");
-            Vehicles.Add("Churchill Gun Carrier", "");
-            Vehicles.Add("T34", "");
-            Vehicles.Add("Toyota Land Cruiser", "LandCruiser.png");
-            Vehicles.Add("B29 Enola Gay", "");
-            Vehicles.Add("Reliant Robin", "ReliantRobin.png");
-            Vehicles.Add("RedBull Soapbox", "SoapBox.png");
-            Vehicles.Add("RedBull Mini", "RBmini.png");
-            Vehicles.Add("Carthaginian War Elephant", "WarElephant.png");
-            Vehicles.Add("Mustang Mach 1", "Mustang.png");
-            Vehicles.Add("Williams FW14B", "WilliamsFW14B.png");
+            Vehicles.Add(Tuple.Create("Volvo 850r", "Volvo.png", 15000));
+            Vehicles.Add(Tuple.Create("Subaru Legacy", "Legacy.png", 10000));
+            Vehicles.Add(Tuple.Create("Subaru Impreza", "Impreza.png", 18000));
+            Vehicles.Add(Tuple.Create("Chevrolet Bel Air", "BelAir.png", 40000));
+            Vehicles.Add(Tuple.Create("Chevrolet Silverado", "Silverado.png", 11000));
+            Vehicles.Add(Tuple.Create("Suzuki Jimney", "Jimny.png", 20000));
+            Vehicles.Add(Tuple.Create("Bismarck", "", 1000000));
+            Vehicles.Add(Tuple.Create("Yamato", "", 1000000));
+            Vehicles.Add(Tuple.Create("MiG-15", "", 150000));
+            Vehicles.Add(Tuple.Create("Fairey Swordfish", "", 60000));
+            Vehicles.Add(Tuple.Create("Churchill Gun Carrier", "",35000));
+            Vehicles.Add(Tuple.Create("T34", "", 50000));
+            Vehicles.Add(Tuple.Create("Toyota Land Cruiser", "LandCruiser.png", 25000));
+            Vehicles.Add(Tuple.Create("B29 Enola Gay", "", 160000));
+            Vehicles.Add(Tuple.Create("Reliant Robin", "ReliantRobin.png", 30000));
+            Vehicles.Add(Tuple.Create("RedBull Soapbox", "SoapBox.png", 19000));
+            Vehicles.Add(Tuple.Create("RedBull Mini", "RBmini.png", 30000));
+            Vehicles.Add(Tuple.Create("Carthaginian War Elephant", "WarElephant.png", 40000));
+            Vehicles.Add(Tuple.Create("Mustang Mach 1", "Mustang.png", 60000));
+            Vehicles.Add(Tuple.Create("Williams FW14B", "WilliamsFW14B.png", 260000));
 
             Random num1 = new Random();
             int int1 = num1.Next(20);
@@ -113,39 +122,39 @@ namespace GroupProject
             return Vehicles(int1);
         }
 
-        public List<String> PositiveGenerator()
-        {
-            Console.WriteLine("Positive Generation Triggered");
-            List<String> Positives = new List<String>();
-            Positives.Add("Trustworthy Owner", 3000);
-            Positives.Add("Valid MOT", 500);
-            Positives.Add("Rare Model", 6000);
-            Positives.Add("Filled With Gold", 2000);
-            Positives.Add("Spare Wheel", 200);
-            List<String> GeneratedPositive = new List<String>();
-            Random num1 = new Random();
-            int int1 = num1.Next(50);
-            if (int1 <= 4)
-            {
-                GeneratedPositive.Add(Positives(int1));
-            }
-            Console.WriteLine(GeneratedPositive);
-            return GeneratedPositive;
-        }
-        
-
-        public Vehicle(String pName, int pPrice, string pImage)
-        {
-            Name = VehicleGenerator(0);
-            Price = pPrice;
-            Image = VehicleGenerator(1);
-            Issue = IssueGenerator(0);
-            Issue = IssueGenerator(1); 
-            Positives = PositiveGenerator(0);
-            PositivesValue = PositiveGenerator(1);
-            
-            
-        }
-
-        
+public List<String> PositiveGenerator()
+{
+    Console.WriteLine("Positive Generation Triggered");
+    List<String> Positives = new List<String>();
+    Positives.Add("Trustworthy Owner", 3000);
+    Positives.Add("Valid MOT", 500);
+    Positives.Add("Rare Model", 6000);
+    Positives.Add("Filled With Gold", 2000);
+    Positives.Add("Spare Wheel", 200);
+    List<String> GeneratedPositive = new List<String>();
+    Random num1 = new Random();
+    int int1 = num1.Next(50);
+    if (int1 <= 4)
+    {
+        GeneratedPositive.Add(Positives(int1));
     }
+    Console.WriteLine(GeneratedPositive);
+    return GeneratedPositive;
+}
+
+
+public Vehicle(String pName, int pPrice, string pImage)
+{
+    Name = VehicleGenerator();
+    Price = pPrice;
+    Image = VehicleGenerator();
+    Issue = IssueGenerator(0);
+    Issue = IssueGenerator(1);
+    Positives = PositiveGenerator(0);
+    PositivesValue = PositiveGenerator(1);
+
+
+}
+
+
+}
