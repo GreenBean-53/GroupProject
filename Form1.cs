@@ -1,4 +1,8 @@
+using System;
 using System.CodeDom.Compiler;
+using System.Drawing;
+using System.Reflection;
+using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Security.Cryptography;
 using System.Security.Cryptography.Xml;
@@ -32,10 +36,10 @@ namespace GroupProject
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+
         }
 
-       
+
 
         private void button1_Click_1(object sender, EventArgs e)
         {
@@ -48,13 +52,14 @@ namespace GroupProject
 
     class Vehicle
     {
-        private string Name;
-        private int Price;
-        private string Image;
-        private List<String> Issue;
-        private string Positives;
-        private string owner;
-        public List<Tuple<String, int>> IssueGenerator()
+        private string name;
+        private int price;
+        private string image;
+        private List<Tuple<String, int>> issue;
+        private string positive;
+        private int issuevalue;
+        private int positivevalue;
+        public static List<Tuple<String, int>> IssueGenerator()
         {
             Console.WriteLine("Issue Selection Triggered");
             List<Tuple<String, int>> Issues = new List<Tuple<String, int>>();
@@ -90,10 +95,9 @@ namespace GroupProject
             return GeneratedIssue;
 
         }
-        public List<Tuple<String, string, int>> VehcileGenerator()
+        public static List<Tuple<String, string, int>> VehicleGenerator()
         {
-            Console.WriteLine("Vehicle Selection Triggered");
-            List<String> Vehicles = new List<String>();
+            List<Tuple<String, String, int>> Vehicles = new List<Tuple<String, String, int>>();
             Vehicles.Add(Tuple.Create("Volvo 850r", "Volvo.png", 15000));
             Vehicles.Add(Tuple.Create("Subaru Legacy", "Legacy.png", 10000));
             Vehicles.Add(Tuple.Create("Subaru Impreza", "Impreza.png", 18000));
@@ -104,7 +108,7 @@ namespace GroupProject
             Vehicles.Add(Tuple.Create("Yamato", "", 1000000));
             Vehicles.Add(Tuple.Create("MiG-15", "", 150000));
             Vehicles.Add(Tuple.Create("Fairey Swordfish", "", 60000));
-            Vehicles.Add(Tuple.Create("Churchill Gun Carrier", "",35000));
+            Vehicles.Add(Tuple.Create("Churchill Gun Carrier", "", 35000));
             Vehicles.Add(Tuple.Create("T34", "", 50000));
             Vehicles.Add(Tuple.Create("Toyota Land Cruiser", "LandCruiser.png", 25000));
             Vehicles.Add(Tuple.Create("B29 Enola Gay", "", 160000));
@@ -115,46 +119,46 @@ namespace GroupProject
             Vehicles.Add(Tuple.Create("Mustang Mach 1", "Mustang.png", 60000));
             Vehicles.Add(Tuple.Create("Williams FW14B", "WilliamsFW14B.png", 260000));
 
-            Random num1 = new Random();
-            int int1 = num1.Next(20);
-            Console.WriteLine(int1);
-            //number used to get the other things
-            return Vehicles(int1);
+            List<Tuple<String, String, int>> GeneratedVehicle = new List<Tuple<String, String, int>>();
+            Random num2 = new Random();
+            int int2 = num2.Next(20);
+            Tuple<string, string, int> Vehicle = Vehicles[int2];
+            System.Diagnostics.Debug.WriteLine(Vehicle);
+            return GeneratedVehicle;
         }
 
-public List<String> PositiveGenerator()
-{
-    Console.WriteLine("Positive Generation Triggered");
-    List<String> Positives = new List<String>();
-    Positives.Add("Trustworthy Owner", 3000);
-    Positives.Add("Valid MOT", 500);
-    Positives.Add("Rare Model", 6000);
-    Positives.Add("Filled With Gold", 2000);
-    Positives.Add("Spare Wheel", 200);
-    List<String> GeneratedPositive = new List<String>();
-    Random num1 = new Random();
-    int int1 = num1.Next(50);
-    if (int1 <= 4)
-    {
-        GeneratedPositive.Add(Positives(int1));
+        public static List<Tuple<String, string, int>> PositiveGenerator()
+        {
+            List<Tuple<String, int>> Positives = new List<Tuple<String, int>>();
+            Positives.Add(Tuple.Create("Trustworthy Owner", 3000));
+            Positives.Add(Tuple.Create("Valid MOT", 500));
+            Positives.Add(Tuple.Create("Rare Model", 6000));
+            Positives.Add(Tuple.Create("Filled With Gold", 2000));
+            Positives.Add(Tuple.Create("Spare Wheel", 200));
+            List<Tuple<String, String, int>> GeneratedPositive = new List<Tuple<String, String, int>>();
+            Random num1 = new Random();
+            int int1 = num1.Next(50);
+            if (int1 <= 4)
+            {
+                Tuple<string, int> Positive = Positives[int1];
+                System.Diagnostics.Debug.WriteLine(Positive);
+            }
+            Console.WriteLine(GeneratedPositive);
+            return GeneratedPositive;
+        }
+
+
+        public Vehicle(string modelName, string imageFile, int modelPrice, List<Tuple<string, int>> issueslist, string positivechoice, int issueprice, int positiveprice)
+        {
+            name = modelName;
+            image = imageFile;
+            price = modelPrice;
+            issue = issueslist;
+            positive = positivechoice;
+            issuevalue = issueprice;
+            positivevalue = positiveprice;
+        }
+        Vehicle vehicle1 = new Vehicle();
+
     }
-    Console.WriteLine(GeneratedPositive);
-    return GeneratedPositive;
-}
-
-
-public Vehicle(String pName, int pPrice, string pImage)
-{
-    Name = VehicleGenerator();
-    Price = pPrice;
-    Image = VehicleGenerator();
-    Issue = IssueGenerator(0);
-    Issue = IssueGenerator(1);
-    Positives = PositiveGenerator(0);
-    PositivesValue = PositiveGenerator(1);
-
-
-}
-
-
 }
