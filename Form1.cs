@@ -158,7 +158,7 @@ namespace GroupProject
             issuevalue = issueprice;
             positivevalue = positiveprice;
         }
-        Vehicle vehicle1 = new Vehicle();
-
+        Vehicle vehicle1 = new Vehicle(VehicleGenerator(), IssueGenerator(), PositiveGenerator());
+        
     }
 }
