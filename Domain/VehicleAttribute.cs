@@ -1,4 +1,4 @@
-﻿namespace GroupProject;
+﻿namespace GroupProject.Domain;
 
 public class VehicleAttribute
 {
