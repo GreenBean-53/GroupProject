@@ -40,6 +40,7 @@
             loadingImage = new PictureBox();
             loadingBar = new ProgressBar();
             aucPurPage = new TabPage();
+            startButton = new Button();
             vehcileTitle = new TextBox();
             playerData = new RichTextBox();
             vehcileData = new ListBox();
@@ -186,6 +187,7 @@
             // 
             // aucPurPage
             // 
+            aucPurPage.Controls.Add(startButton);
             aucPurPage.Controls.Add(vehcileTitle);
             aucPurPage.Controls.Add(playerData);
             aucPurPage.Controls.Add(vehcileData);
@@ -207,12 +209,24 @@
             aucPurPage.Text = "AucPurchPage";
             aucPurPage.UseVisualStyleBackColor = true;
             // 
+            // startButton
+            // 
+            startButton.Font = new Font("Stencil", 40F, FontStyle.Bold | FontStyle.Italic | FontStyle.Underline);
+            startButton.Location = new Point(383, 66);
+            startButton.Name = "startButton";
+            startButton.Size = new Size(386, 262);
+            startButton.TabIndex = 1;
+            startButton.Text = "START";
+            startButton.UseVisualStyleBackColor = true;
+            startButton.Click += startButton_Click;
+            // 
             // vehcileTitle
             // 
             vehcileTitle.Location = new Point(302, 6);
             vehcileTitle.Name = "vehcileTitle";
             vehcileTitle.Size = new Size(547, 23);
             vehcileTitle.TabIndex = 15;
+            vehcileTitle.TextChanged += vehcileTitle_TextChanged;
             // 
             // playerData
             // 
@@ -246,6 +260,7 @@
             negativeAttributes.Size = new Size(270, 244);
             negativeAttributes.TabIndex = 11;
             negativeAttributes.Text = "";
+            negativeAttributes.TextChanged += negativeAttributes_TextChanged;
             // 
             // numericUpDown1
             // 
@@ -398,5 +413,6 @@
         private PictureBox loadingImage;
         private ProgressBar loadingBar;
         private Button tutorialBackButton;
+        private Button startButton;
     }
 }
