@@ -94,5 +94,6 @@ public partial class Game : Form
 
         startButton.Enabled = false;    
         startButton.Visible = false;    
+
     }
 }
