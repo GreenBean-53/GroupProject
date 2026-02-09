@@ -95,6 +95,6 @@ public partial class Game : Form
         startButton.Enabled = false;
         startButton.Visible = false;
         
-        vehcilePictureBox.Image = Image.FromFile(@"C:\Users\georg\OneDrive\Documents\GitHub\GroupProject1\GroupProject\Images\Impreza.png");
+        vehcilePictureBox.Image = Image.FromFile(@"C:\Users\georg\OneDrive\Documents\GitHub\GroupProject1\GroupProject\Images\" + _currentVehicle.Image);
     }
 }
