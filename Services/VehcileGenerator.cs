@@ -14,6 +14,9 @@ public static class VehicleGenerator
         decimal positivePriceEffect = positive is null ? 0 : positive.PriceEffect;
         vehicle.Price = vehicle.Price - issues.Sum(issue => -issue.PriceEffect) + positivePriceEffect;
 
+        vehicle.Issues = issues;
+        vehicle.Positive = positive;
+
         return vehicle;
     }
 
@@ -63,7 +66,7 @@ public static class VehicleGenerator
         };
 
         var random = new Random();
-        var generatedPositiveNumber = random.Next(50);
+        var generatedPositiveNumber = random.Next(positives.Count * 4);
 
         if (generatedPositiveNumber <= 4)
         {

@@ -22,11 +22,27 @@ public partial class Game : Form
 
     private void SetupVehicle()
     {
-        // LabelName.Text = _currentVehicle.Name;
+        vehcileTitle.Text = _currentVehicle.Name;
 
-        // You can set up other UI elements related to the vehicle here
+        startButton.Enabled = false;
+        startButton.Visible = false;
+
+        var location = Path.GetDirectoryName(Application.ExecutablePath);
+
+        vehcilePictureBox.Image = Image.FromFile(Path.Combine(location!, "images", _currentVehicle.Image));
+
+        listBoxIssues.Items.Clear();
+        foreach (var issue in _currentVehicle.Issues)
+        {
+            listBoxIssues.Items.Add(issue.Attribute);
+        }
+
+        listBoxPositives.Items.Clear();
+        listBoxPositives.Items.Add(_currentVehicle.Positive is null ? "None" : _currentVehicle.Positive.Attribute);
+
+        listBoxPriceHistory.Items.Clear();
+        listBoxPriceHistory.Items.Add($"Initial Price: £{_currentVehicle.Price}");
     }
-
 
     public void pictureBox1_Click(object sender, EventArgs e)
     {
@@ -85,18 +101,27 @@ public partial class Game : Form
 
     private void vehcileTitle_TextChanged(object sender, EventArgs e)
     {
-        
+
     }
 
     private void startButton_Click(object sender, EventArgs e)
     {
-        vehcileTitle.Text = _currentVehicle.Name;
+        //SetupVehicle();
+    }
 
-        startButton.Enabled = false;
-        startButton.Visible = false;
+    private void buttonRefresh_Click(object sender, EventArgs e)
+    {
+        _currentVehicle = VehicleGenerator.GenerateVehicleWithAdjustedPrice();
+        SetupVehicle();
+    }
 
-        var location = Path.GetDirectoryName(Application.ExecutablePath);
-        
-        vehcilePictureBox.Image = Image.FromFile(Path.Combine(location!, "images", _currentVehicle.Image));
+    private void label2_Click(object sender, EventArgs e)
+    {
+
+    }
+
+    private void raisePriceButton_Click(object sender, EventArgs e)
+    {
+        listBoxPriceHistory.Items.Add($"New Bid £{numericUpDownBid.Value + _currentVehicle.Price}");
     }
 }
