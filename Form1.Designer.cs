@@ -88,10 +88,10 @@
             mainMenu.Controls.Add(exitOpenPage);
             mainMenu.Controls.Add(tutorialButton);
             mainMenu.Controls.Add(playButton);
-            mainMenu.Location = new Point(4, 24);
+            mainMenu.Location = new Point(4, 34);
             mainMenu.Name = "mainMenu";
             mainMenu.Padding = new Padding(3);
-            mainMenu.Size = new Size(1148, 608);
+            mainMenu.Size = new Size(1148, 598);
             mainMenu.TabIndex = 0;
             mainMenu.Text = "MainMenu";
             mainMenu.UseVisualStyleBackColor = true;
@@ -102,7 +102,7 @@
             auctionFront.Font = new Font("Stencil", 40F, FontStyle.Bold | FontStyle.Italic | FontStyle.Underline);
             auctionFront.Location = new Point(383, 89);
             auctionFront.Name = "auctionFront";
-            auctionFront.Size = new Size(382, 64);
+            auctionFront.Size = new Size(562, 95);
             auctionFront.TabIndex = 3;
             auctionFront.Text = "The Auction";
             auctionFront.Click += auctionFront_Click;
@@ -140,10 +140,10 @@
             // tutorialPage
             // 
             tutorialPage.Controls.Add(tutorialBackButton);
-            tutorialPage.Location = new Point(4, 24);
+            tutorialPage.Location = new Point(4, 34);
             tutorialPage.Name = "tutorialPage";
             tutorialPage.Padding = new Padding(3);
-            tutorialPage.Size = new Size(1148, 608);
+            tutorialPage.Size = new Size(1148, 598);
             tutorialPage.TabIndex = 1;
             tutorialPage.Text = "TutorialPage";
             tutorialPage.UseVisualStyleBackColor = true;
@@ -162,10 +162,10 @@
             // 
             loadingPage.Controls.Add(loadingImage);
             loadingPage.Controls.Add(loadingBar);
-            loadingPage.Location = new Point(4, 24);
+            loadingPage.Location = new Point(4, 34);
             loadingPage.Name = "loadingPage";
             loadingPage.Padding = new Padding(3);
-            loadingPage.Size = new Size(1148, 608);
+            loadingPage.Size = new Size(1148, 598);
             loadingPage.TabIndex = 2;
             loadingPage.Text = "LoadingPage";
             loadingPage.UseVisualStyleBackColor = true;
@@ -201,10 +201,10 @@
             aucPurPage.Controls.Add(tutExitButton);
             aucPurPage.Controls.Add(priceHistory);
             aucPurPage.Controls.Add(vehcilePictureBox);
-            aucPurPage.Location = new Point(4, 24);
+            aucPurPage.Location = new Point(4, 34);
             aucPurPage.Name = "aucPurPage";
             aucPurPage.Padding = new Padding(3);
-            aucPurPage.Size = new Size(1148, 608);
+            aucPurPage.Size = new Size(1148, 598);
             aucPurPage.TabIndex = 4;
             aucPurPage.Text = "AucPurchPage";
             aucPurPage.UseVisualStyleBackColor = true;
@@ -224,7 +224,7 @@
             // 
             vehcileTitle.Location = new Point(302, 6);
             vehcileTitle.Name = "vehcileTitle";
-            vehcileTitle.Size = new Size(547, 23);
+            vehcileTitle.Size = new Size(547, 31);
             vehcileTitle.TabIndex = 15;
             vehcileTitle.TextChanged += vehcileTitle_TextChanged;
             // 
@@ -242,7 +242,7 @@
             vehcileData.FormattingEnabled = true;
             vehcileData.Location = new Point(6, 6);
             vehcileData.Name = "vehcileData";
-            vehcileData.Size = new Size(290, 349);
+            vehcileData.Size = new Size(290, 329);
             vehcileData.TabIndex = 13;
             // 
             // positiveAttributes
@@ -267,7 +267,7 @@
             numericUpDown1.Location = new Point(855, 460);
             numericUpDown1.Maximum = new decimal(new int[] { 100000, 0, 0, 0 });
             numericUpDown1.Name = "numericUpDown1";
-            numericUpDown1.Size = new Size(290, 23);
+            numericUpDown1.Size = new Size(290, 31);
             numericUpDown1.TabIndex = 8;
             // 
             // skipBidButton
@@ -283,7 +283,7 @@
             // 
             currentMoney.Location = new Point(855, 35);
             currentMoney.Name = "currentMoney";
-            currentMoney.Size = new Size(290, 23);
+            currentMoney.Size = new Size(290, 31);
             currentMoney.TabIndex = 6;
             // 
             // timeLimit
@@ -318,7 +318,7 @@
             priceHistory.FormattingEnabled = true;
             priceHistory.Location = new Point(855, 66);
             priceHistory.Name = "priceHistory";
-            priceHistory.Size = new Size(290, 289);
+            priceHistory.Size = new Size(290, 279);
             priceHistory.TabIndex = 1;
             priceHistory.SelectedIndexChanged += listBox1_SelectedIndexChanged;
             // 
@@ -327,36 +327,37 @@
             vehcilePictureBox.Location = new Point(302, 35);
             vehcilePictureBox.Name = "vehcilePictureBox";
             vehcilePictureBox.Size = new Size(547, 320);
+            vehcilePictureBox.SizeMode = PictureBoxSizeMode.Zoom;
             vehcilePictureBox.TabIndex = 0;
             vehcilePictureBox.TabStop = false;
             vehcilePictureBox.Click += pictureBox1_Click;
             // 
             // aucRepPage
             // 
-            aucRepPage.Location = new Point(4, 24);
+            aucRepPage.Location = new Point(4, 34);
             aucRepPage.Name = "aucRepPage";
             aucRepPage.Padding = new Padding(3);
-            aucRepPage.Size = new Size(1148, 608);
+            aucRepPage.Size = new Size(1148, 598);
             aucRepPage.TabIndex = 5;
             aucRepPage.Text = "AucRepPage";
             aucRepPage.UseVisualStyleBackColor = true;
             // 
             // aucSalePage
             // 
-            aucSalePage.Location = new Point(4, 24);
+            aucSalePage.Location = new Point(4, 34);
             aucSalePage.Name = "aucSalePage";
             aucSalePage.Padding = new Padding(3);
-            aucSalePage.Size = new Size(1148, 608);
+            aucSalePage.Size = new Size(1148, 598);
             aucSalePage.TabIndex = 6;
             aucSalePage.Text = "AucSalePage";
             aucSalePage.UseVisualStyleBackColor = true;
             // 
             // leaderboardPage
             // 
-            leaderboardPage.Location = new Point(4, 24);
+            leaderboardPage.Location = new Point(4, 34);
             leaderboardPage.Name = "leaderboardPage";
             leaderboardPage.Padding = new Padding(3);
-            leaderboardPage.Size = new Size(1148, 608);
+            leaderboardPage.Size = new Size(1148, 598);
             leaderboardPage.TabIndex = 7;
             leaderboardPage.Text = "LeaderboardPage";
             leaderboardPage.UseVisualStyleBackColor = true;

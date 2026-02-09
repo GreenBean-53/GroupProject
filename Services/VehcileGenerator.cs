@@ -26,7 +26,7 @@ public static class VehicleGenerator
             new Vehicle("Subaru Impreza", "Impreza.png", 18000),
             new Vehicle("Chevrolet Bel Air", "BelAir.png", 40000),
             new Vehicle("Chevrolet Silverado", "Silverado.png", 11000),
-            new Vehicle("Suzuki Jimney", "Jimny.png", 20000),
+            new Vehicle("Suzuki Jimny", "Jimny.png", 20000),
             new Vehicle("Bismarck", "Bismarck.png", 1000000),
             new Vehicle("Yamato", "Yamato.png", 1000000),
             new Vehicle("MiG-15", "MiG15.png", 150000),
