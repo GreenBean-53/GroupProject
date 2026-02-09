@@ -9,6 +9,92 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Images\B29.png" />
+    <None Remove="Images\BelAir.png" />
+    <None Remove="Images\Bismarck.png" />
+    <None Remove="Images\GunCarrier.png" />
+    <None Remove="Images\Impreza.png" />
+    <None Remove="Images\Jimny.png" />
+    <None Remove="Images\LandCruiser.png" />
+    <None Remove="Images\Legacy.png" />
+    <None Remove="Images\MiG15.png" />
+    <None Remove="Images\Mustang.png" />
+    <None Remove="Images\RBmini.png" />
+    <None Remove="Images\ReliantRobin.png" />
+    <None Remove="Images\Silverado.png" />
+    <None Remove="Images\SoapBox.png" />
+    <None Remove="Images\Swordfish.png" />
+    <None Remove="Images\T34.png" />
+    <None Remove="Images\Volvo.png" />
+    <None Remove="Images\WarElephant.png" />
+    <None Remove="Images\WilliamsFW14B.png" />
+    <None Remove="Images\Yamato.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Images\B29.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\BelAir.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Bismarck.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\GunCarrier.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Impreza.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Jimny.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\LandCruiser.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Legacy.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\MiG15.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Mustang.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\RBmini.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\ReliantRobin.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Silverado.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\SoapBox.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Swordfish.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\T34.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Volvo.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\WarElephant.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\WilliamsFW14B.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Yamato.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
     <Compile Update="Properties\Resources.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
