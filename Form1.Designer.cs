@@ -92,10 +92,10 @@
             mainMenu.Controls.Add(exitOpenPage);
             mainMenu.Controls.Add(tutorialButton);
             mainMenu.Controls.Add(playButton);
-            mainMenu.Location = new Point(4, 24);
+            mainMenu.Location = new Point(4, 34);
             mainMenu.Name = "mainMenu";
             mainMenu.Padding = new Padding(3);
-            mainMenu.Size = new Size(1148, 608);
+            mainMenu.Size = new Size(1148, 598);
             mainMenu.TabIndex = 0;
             mainMenu.Text = "MainMenu";
             mainMenu.UseVisualStyleBackColor = true;
@@ -104,9 +104,9 @@
             // 
             auctionFront.AutoSize = true;
             auctionFront.Font = new Font("Stencil", 40F, FontStyle.Bold | FontStyle.Italic | FontStyle.Underline);
-            auctionFront.Location = new Point(383, 89);
+            auctionFront.Location = new Point(293, 89);
             auctionFront.Name = "auctionFront";
-            auctionFront.Size = new Size(382, 64);
+            auctionFront.Size = new Size(562, 95);
             auctionFront.TabIndex = 3;
             auctionFront.Text = "The Auction";
             auctionFront.Click += auctionFront_Click;
@@ -144,10 +144,10 @@
             // tutorialPage
             // 
             tutorialPage.Controls.Add(tutorialBackButton);
-            tutorialPage.Location = new Point(4, 24);
+            tutorialPage.Location = new Point(4, 34);
             tutorialPage.Name = "tutorialPage";
             tutorialPage.Padding = new Padding(3);
-            tutorialPage.Size = new Size(1148, 608);
+            tutorialPage.Size = new Size(1148, 598);
             tutorialPage.TabIndex = 1;
             tutorialPage.Text = "TutorialPage";
             tutorialPage.UseVisualStyleBackColor = true;
@@ -166,10 +166,10 @@
             // 
             loadingPage.Controls.Add(loadingImage);
             loadingPage.Controls.Add(loadingBar);
-            loadingPage.Location = new Point(4, 24);
+            loadingPage.Location = new Point(4, 34);
             loadingPage.Name = "loadingPage";
             loadingPage.Padding = new Padding(3);
-            loadingPage.Size = new Size(1148, 608);
+            loadingPage.Size = new Size(1148, 598);
             loadingPage.TabIndex = 2;
             loadingPage.Text = "LoadingPage";
             loadingPage.UseVisualStyleBackColor = true;
@@ -209,10 +209,10 @@
             aucPurPage.Controls.Add(tutExitButton);
             aucPurPage.Controls.Add(listBoxPriceHistory);
             aucPurPage.Controls.Add(vehcilePictureBox);
-            aucPurPage.Location = new Point(4, 24);
+            aucPurPage.Location = new Point(4, 34);
             aucPurPage.Name = "aucPurPage";
             aucPurPage.Padding = new Padding(3);
-            aucPurPage.Size = new Size(1148, 608);
+            aucPurPage.Size = new Size(1148, 598);
             aucPurPage.TabIndex = 4;
             aucPurPage.Text = "AucPurchPage";
             aucPurPage.UseVisualStyleBackColor = true;
@@ -222,7 +222,7 @@
             listBoxPositives.FormattingEnabled = true;
             listBoxPositives.Location = new Point(579, 389);
             listBoxPositives.Name = "listBoxPositives";
-            listBoxPositives.Size = new Size(264, 199);
+            listBoxPositives.Size = new Size(264, 179);
             listBoxPositives.TabIndex = 21;
             // 
             // listBoxIssues
@@ -230,7 +230,7 @@
             listBoxIssues.FormattingEnabled = true;
             listBoxIssues.Location = new Point(302, 389);
             listBoxIssues.Name = "listBoxIssues";
-            listBoxIssues.Size = new Size(264, 199);
+            listBoxIssues.Size = new Size(264, 179);
             listBoxIssues.TabIndex = 20;
             // 
             // label3
@@ -239,7 +239,7 @@
             label3.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label3.Location = new Point(579, 364);
             label3.Name = "label3";
-            label3.Size = new Size(63, 17);
+            label3.Size = new Size(95, 28);
             label3.TabIndex = 19;
             label3.Text = "Positives";
             // 
@@ -249,7 +249,7 @@
             label2.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.Location = new Point(311, 41);
             label2.Name = "label2";
-            label2.Size = new Size(36, 17);
+            label2.Size = new Size(55, 28);
             label2.TabIndex = 18;
             label2.Text = "Title";
             label2.Click += label2_Click;
@@ -260,7 +260,7 @@
             label1.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.Location = new Point(302, 364);
             label1.Name = "label1";
-            label1.Size = new Size(45, 17);
+            label1.Size = new Size(68, 28);
             label1.TabIndex = 17;
             label1.Text = "Issues";
             // 
@@ -289,7 +289,7 @@
             // 
             vehcileTitle.Location = new Point(377, 41);
             vehcileTitle.Name = "vehcileTitle";
-            vehcileTitle.Size = new Size(466, 23);
+            vehcileTitle.Size = new Size(466, 31);
             vehcileTitle.TabIndex = 15;
             vehcileTitle.TextChanged += vehcileTitle_TextChanged;
             // 
@@ -307,7 +307,7 @@
             vehcileData.FormattingEnabled = true;
             vehcileData.Location = new Point(6, 33);
             vehcileData.Name = "vehcileData";
-            vehcileData.Size = new Size(290, 319);
+            vehcileData.Size = new Size(290, 304);
             vehcileData.TabIndex = 13;
             // 
             // numericUpDownBid
@@ -315,7 +315,7 @@
             numericUpDownBid.Location = new Point(855, 460);
             numericUpDownBid.Maximum = new decimal(new int[] { 100000, 0, 0, 0 });
             numericUpDownBid.Name = "numericUpDownBid";
-            numericUpDownBid.Size = new Size(290, 23);
+            numericUpDownBid.Size = new Size(290, 31);
             numericUpDownBid.TabIndex = 8;
             // 
             // skipBidButton
@@ -331,7 +331,7 @@
             // 
             currentMoney.Location = new Point(855, 35);
             currentMoney.Name = "currentMoney";
-            currentMoney.Size = new Size(290, 23);
+            currentMoney.Size = new Size(290, 31);
             currentMoney.TabIndex = 6;
             // 
             // timeLimit
@@ -367,7 +367,7 @@
             listBoxPriceHistory.FormattingEnabled = true;
             listBoxPriceHistory.Location = new Point(855, 66);
             listBoxPriceHistory.Name = "listBoxPriceHistory";
-            listBoxPriceHistory.Size = new Size(290, 274);
+            listBoxPriceHistory.Size = new Size(290, 254);
             listBoxPriceHistory.TabIndex = 1;
             listBoxPriceHistory.SelectedIndexChanged += listBox1_SelectedIndexChanged;
             // 
@@ -383,30 +383,30 @@
             // 
             // aucRepPage
             // 
-            aucRepPage.Location = new Point(4, 24);
+            aucRepPage.Location = new Point(4, 34);
             aucRepPage.Name = "aucRepPage";
             aucRepPage.Padding = new Padding(3);
-            aucRepPage.Size = new Size(1148, 608);
+            aucRepPage.Size = new Size(1148, 598);
             aucRepPage.TabIndex = 5;
             aucRepPage.Text = "AucRepPage";
             aucRepPage.UseVisualStyleBackColor = true;
             // 
             // aucSalePage
             // 
-            aucSalePage.Location = new Point(4, 24);
+            aucSalePage.Location = new Point(4, 34);
             aucSalePage.Name = "aucSalePage";
             aucSalePage.Padding = new Padding(3);
-            aucSalePage.Size = new Size(1148, 608);
+            aucSalePage.Size = new Size(1148, 598);
             aucSalePage.TabIndex = 6;
             aucSalePage.Text = "AucSalePage";
             aucSalePage.UseVisualStyleBackColor = true;
             // 
             // leaderboardPage
             // 
-            leaderboardPage.Location = new Point(4, 24);
+            leaderboardPage.Location = new Point(4, 34);
             leaderboardPage.Name = "leaderboardPage";
             leaderboardPage.Padding = new Padding(3);
-            leaderboardPage.Size = new Size(1148, 608);
+            leaderboardPage.Size = new Size(1148, 598);
             leaderboardPage.TabIndex = 7;
             leaderboardPage.Text = "LeaderboardPage";
             leaderboardPage.UseVisualStyleBackColor = true;
